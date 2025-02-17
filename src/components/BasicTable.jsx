@@ -88,28 +88,28 @@ export default function BasicTable({ data, columns }) {
       </table>
       <div className="flex items-center gap-2">
         <button
-          className="px-4 py-2 text-sm font-medium bg-blue-500 text-white rounded-md disabled:bg-gray-300"
+          className="px-4 py-2 text-sm font-medium bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:bg-gray-300 cursor-pointer disabled:cursor-not-allowed"
           disabled={table.getState().pagination.pageIndex === 0}
           onClick={() => table.setPageIndex(0)}
         >
           First Page
         </button>
         <button
-          className="px-4 py-2 text-sm font-medium bg-blue-500 text-white rounded-md disabled:bg-gray-300"
+          className="px-4 py-2 text-sm font-medium bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:bg-gray-300 cursor-pointer disabled:cursor-not-allowed"
           disabled={!table.getCanPreviousPage()}
           onClick={() => table.previousPage()}
         >
           👈
         </button>
         <button
-          className="px-4 py-2 text-sm font-medium bg-blue-500 text-white rounded-md disabled:bg-gray-300"
+          className="px-4 py-2 text-sm font-medium bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:bg-gray-300 cursor-pointer disabled:cursor-not-allowed"
           disabled={!table.getCanNextPage()}
           onClick={() => table.nextPage()}
         >
           👉
         </button>
         <button
-          className="px-4 py-2 text-sm font-medium bg-blue-500 text-white rounded-md disabled:bg-gray-300"
+          className="px-4 py-2 text-sm font-medium bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:bg-gray-300 cursor-pointer disabled:cursor-not-allowed"
           disabled={
             table.getState().pagination.pageIndex === table.getPageCount() - 1
           }
